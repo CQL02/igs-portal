@@ -240,7 +240,7 @@ const Invoice = () => {
         placeholder: string,
         required: boolean = false,
     ) => (
-        <Form.Item<CustomerModel>
+        <Form.Item<InvoiceModel>
             label={label}
             name={name as NamePath}
             labelCol={{span: 10}}
@@ -272,7 +272,7 @@ const Invoice = () => {
         <PageLayout>
             <div className={"text-3xl font-bold pt-6"}>Invoice</div>
             <div className={"justify-end w-full flex my-3"}>
-                <Button type={"primary"} icon={<PlusOutlined/>} onClick={() => showModal("add")}>Add Customer</Button>
+                <Button type={"primary"} icon={<PlusOutlined/>} onClick={() => showModal("add")}>Add Invoice</Button>
             </div>
             <Table columns={TABLE_HEADER}
                    dataSource={invoices?.map((invoice) => ({...invoice, key: invoice.id})) || []}
